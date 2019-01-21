@@ -1,25 +1,25 @@
 
 const express = require('express')
 const app = express()
-const { IncomingWebhook } = require('@slack/client')
+// const { IncomingWebhook } = require('@slack/client')
 
 
-const url = process.env.SLACK_WEBHOOK_URL
-const webhook = new IncomingWebhook(url)
+// const url = process.env.SLACK_WEBHOOK_URL
+// const webhook = new IncomingWebhook(url)
 
 app.get('/', (req, res) => res.send('Hello World V2!'))
 
-app.get('/slack', (req, res) => {
-    webhook.send('Hello there', function(err, res) {
-        if (err) {
-            console.log('Error:', err);
-        } else {
-            console.log('Message sent: ', res);
-        }
-    });
+// app.get('/slack', (req, res) => {
+//     webhook.send('Hello there', function(err, res) {
+//         if (err) {
+//             console.log('Error:', err);
+//         } else {
+//             console.log('Message sent: ', res);
+//         }
+//     });
     
-    res.send('Slack sent')
-})
+//     res.send('Slack sent')
+// })
 
 app.get('/commit', (req, res) => {
     revision = require('child_process')
