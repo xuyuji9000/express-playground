@@ -31,6 +31,6 @@ app.get('/commit', (req, res) => {
 
 })
 
-let port = process.env.PORT || 5000
+let port = process.env.PORT || 80
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
