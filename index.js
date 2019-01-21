@@ -7,7 +7,9 @@ const app = express()
 // const url = process.env.SLACK_WEBHOOK_URL
 // const webhook = new IncomingWebhook(url)
 
-app.get('/', (req, res) => res.send('Hello World V2!'))
+app.get('/', (req, res) => {
+    res.send(`Hello World V2! ${new Date()}`)
+})
 
 // app.get('/slack', (req, res) => {
 //     webhook.send('Hello there', function(err, res) {
